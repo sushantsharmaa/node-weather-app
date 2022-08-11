@@ -1,7 +1,18 @@
 const curDate = document.getElementById("date");
 let weathercon = document.getElementById("weathercon");
 
-const tempStatus = "Cloud";
+const tempStatus = "{tempStatus}";
+
+if (tempStatus === "Sunny") {
+  weathercon.innerHTML = "<i class='fas fa-sun' style='color: #eccc68'></i>";
+} else if (tempStatus === "Clouds") {
+  weathercon.innerHTML = "<i class='fas fa-cloud' style='color: #dfe4ea'></i>";
+}
+if (tempStatus === "Rainy") {
+  weathercon.innerHTML = "<i class='fas fa-rain' style='color: #a4b0be'></i>";
+} else {
+  weathercon.innerHTML = "<i class='fas fa-cloud' style='color: #44c3de'></i>";
+}
 
 const getCurrentDay = () => {
   const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
